@@ -1,14 +1,15 @@
 import TaskItem from "./TaskItem"
 
-function ListOfTask()
+function ListOfTask({ todoList,handleCompleteTodo })
 {
     return(
         <div className="my-5">
             <ul>
-                <li className="border-b border-slate-400 py-3"><TaskItem title="Task 1" /></li>
-                <li className="border-b border-slate-400 py-3"><TaskItem title="Task 2" /></li>
-                <li className="border-b border-slate-400 py-3"><TaskItem title="Task 3" /></li>
-                <li className="border-b border-slate-400 py-3"><TaskItem title="Task 4" /></li>
+            {
+                todoList.map( todo => {
+                   return <li key={todo.id} className="border-b border-slate-400 py-3"><TaskItem handleCompleteTodo={handleCompleteTodo} todo={todo} /></li>
+                })
+            }
             </ul>
         </div>
     );

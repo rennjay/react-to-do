@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Buy groceries",
+    "description": "Get milk, eggs, bread, and vegetables from the store.",
+    "isCompleted": false,
+    "completionDate": null
+  },
+  {
+    "id": 2,
+    "title": "Finish work report",
+    "description": "Complete the quarterly sales report for the team meeting.",
+    "isCompleted": false,
+    "completionDate": null
+  },
+  {
+    "id": 3,
+    "title": "Go to the gym",
+    "description": "Hit the gym for a workout session and cardio.",
+    "isCompleted": false,
+    "completionDate": null
+  },
+  {
+    "id": 4,
+    "title": "Read a book",
+    "description": "Spend some quality time reading your favorite novel.",
+    "isCompleted": false,
+    "completionDate": null
+  },
+  {
+    "id": 5,
+    "title": "Call mom",
+    "description": "Catch up with your mom and see how she's doing.",
+    "isCompleted": false,
+    "completionDate": null
+  },
+  {
+    "id": 6,
+    "title": "Plan weekend trip",
+    "description": "Research and plan a weekend getaway with friends.",
+    "isCompleted": false,
+    "completionDate": null
+  },
+  {
+    "id": 7,
+    "title": "Pay bills",
+    "description": "Pay electricity, water, and internet bills for the month.",
+    "isCompleted": false,
+    "completionDate": null
+  },
+  {
+    "id": 8,
+    "title": "Clean the house",
+    "description": "Do a thorough cleaning of the entire house.",
+    "isCompleted": false,
+    "completionDate": null
+  },
+  {
+    "id": 9,
+    "title": "Learn a new recipe",
+    "description": "Experiment with a new recipe for dinner tonight.",
+    "isCompleted": false,
+    "completionDate": null
+  },
+  {
+    "id": 10,
+    "title": "Watch a movie",
+    "description": "Relax and watch a movie you've been wanting to see.",
+    "isCompleted": false,
+    "completionDate": null
+  }
+]
