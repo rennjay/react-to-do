@@ -7,7 +7,7 @@ function ListOfTask({ todoList,handleCompleteTodo })
             <ul>
             {
                 todoList.map( todo => {
-                   return <li key={todo.id} className="border-b border-slate-400 py-3"><TaskItem handleCompleteTodo={handleCompleteTodo} todo={todo} /></li>
+                   return <li key={todo.id} className="border-b border-slate-400"><TaskItem handleCompleteTodo={handleCompleteTodo} todo={todo} /></li>
                 })
             }
             </ul>

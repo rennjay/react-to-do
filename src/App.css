@@ -3,3 +3,12 @@ main {
   padding: 10px;
   margin-bottom: 30px;
 }
+
+.task-item-container {
+  cursor: pointer;
+}
+.task-item-container:hover {
+  transform: scaleX(1.01);
+  transition: ease-out 0.2s;
+  background-color: aliceblue;
+}
