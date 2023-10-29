@@ -8,7 +8,7 @@ main {
   cursor: pointer;
 }
 .task-item-container:hover {
-  transform: scaleX(1.01);
+  /* transform: scaleX(1.01); */
   transition: ease-out 0.2s;
   background-color: aliceblue;
 }

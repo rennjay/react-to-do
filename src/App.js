@@ -58,13 +58,13 @@ const [description, setDescription] = useState("");
   };
 
   return (
-    <main className='max-w-3xl mx-auto mt-5'>
+    <main className='max-w-5xl mx-auto mt-5'>
     <h1 className='text-5xl text-center bg-green-600 p-5 rounded text-white'>Your To-Do List</h1>
     <div className='flex justify-between'>
-      <section className="left p-3 w-full">
+      <section className="left p-3 w-2/3">
         <ListOfTask todoList={todoList} handleCompleteTodo={handleCompleteTodo}/>
       </section>
-      <section className="right p-3 w-full">
+      <section className="right p-3 w-1/3">
         <TodoForm handleTodoAdd={handleAddTodo} 
         handleTitleChange={handleTitleChange} title={title} 
         handleDescriptionChange={handleDescriptionChange} description={description} />
