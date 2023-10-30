@@ -101,7 +101,7 @@ const titleField = useRef(null);
 
   return (
     <main className='max-w-5xl mx-auto mt-5'>
-      <h1 className='text-5xl text-center bg-green-600 p-5 rounded text-white'>Your To-Do List</h1>
+      <h1 className='text-5xl text-center bg-main p-5 rounded-t text-white'>Your To-Do List</h1>
       <div className='flex justify-between'>
         <section className="left p-3 w-2/3">
           <ListOfTask todoList={todoList} handleCompleteTodo={handleCompleteTodo} handleTaskDelete={handleTaskDelete} handleTaskEdit={handleTaskEdit} />

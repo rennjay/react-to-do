@@ -17,7 +17,7 @@ const handleMouseLeave = (e) => {
             onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
             <div className="task-item-content flex w-full" onClick={(event) => handleCompleteTodo(event, todo)}>
                 <div className="flex justify-items-center items-center px-2">
-                    <FaCheckCircle className={'text-2xl ' + (todo.isCompleted ? 'text-green-600' : 'text-gray-400')} />
+                    <FaCheckCircle className={'text-2xl ' + (todo.isCompleted ? 'text-secondary' : 'text-gray-400')} />
                 </div>
                 <div>
                     <div className="TaskItemHeader flex">
