@@ -2,10 +2,10 @@ import { FaCheckCircle } from 'react-icons/fa';
 import TaskControls from './TaskControls';
 import { useState } from 'react';
 
-function TaskItem({todo, handleCompleteTodo}){
+function TaskItem({todo, handleCompleteTodo, handleTaskDelete, handleTaskEdit}){
 let [showTaskControls, setShowTaskControls] = useState(false);
 
-const handleMouseOver = (e) => {
+const handleMouseOver = (e) =>    {
     setShowTaskControls(true);
 };
 
@@ -13,13 +13,11 @@ const handleMouseLeave = (e) => {
     setShowTaskControls(false);
 };
     return(
-        <div className="flex task-item-container py-3 justify-between" 
-            onClick={(event) => handleCompleteTodo(event, todo)} 
-                onMouseOver={handleMouseOver}
-                    onMouseLeave={handleMouseLeave}>
-            <div className="task-item-content flex">
+        <div className="flex task-item-container py-3 justify-between"
+            onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+            <div className="task-item-content flex" onClick={(event) => handleCompleteTodo(event, todo)}>
                 <div className="flex justify-items-center items-center px-2">
-                    <FaCheckCircle className={'text-xl ' + (todo.isCompleted ? 'text-green-600' : 'text-gray-400')} />
+                    <FaCheckCircle className={'text-2xl ' + (todo.isCompleted ? 'text-green-600' : 'text-gray-400')} />
                 </div>
                 <div>
                     <div className="TaskItemHeader flex">
@@ -30,9 +28,8 @@ const handleMouseLeave = (e) => {
                     </div>
                 </div>
             </div>
-            <TaskControls showTaskControls={showTaskControls} />
+            <TaskControls showTaskControls={showTaskControls} todo={todo} handleTaskDelete={handleTaskDelete} handleTaskEdit={handleTaskEdit}/>
         </div>
     );
 }
 export default TaskItem;
-
