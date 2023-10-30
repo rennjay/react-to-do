@@ -15,7 +15,7 @@ const handleMouseLeave = (e) => {
     return(
         <div className="flex task-item-container py-3 justify-between"
             onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
-            <div className="task-item-content flex" onClick={(event) => handleCompleteTodo(event, todo)}>
+            <div className="task-item-content flex w-full" onClick={(event) => handleCompleteTodo(event, todo)}>
                 <div className="flex justify-items-center items-center px-2">
                     <FaCheckCircle className={'text-2xl ' + (todo.isCompleted ? 'text-green-600' : 'text-gray-400')} />
                 </div>
@@ -25,6 +25,7 @@ const handleMouseLeave = (e) => {
                     </div>
                     <div className="task-item-description text-xs">
                         <p>{todo.description}</p>
+                        {todo.isCompleted ? <p className='text-xs text-gray-400 italic'>Completed on {(new Date(todo.completionDate)).toLocaleString()}</p>:''}
                     </div>
                 </div>
             </div>

@@ -25,12 +25,13 @@ const titleField = useRef(null);
     const updatedTodoList = todoList.map((item) => {
       if(todo.id === item.id)
       {
-        return {...todo, isCompleted: !todo.isCompleted};
+        let isCompleted = !todo.isCompleted;
+        let newTodo = {...todo, isCompleted: isCompleted, completionDate: isCompleted ? Date() : null}
+        return newTodo;
       }
       return item;
     });
     setTodoList(updatedTodoList);
-    console.log('Todo processed!',todo);
   };
 
   const clearForm = () => {
@@ -76,11 +77,8 @@ const titleField = useRef(null);
 
   const handleTaskUpdate =(e)=> {
     e.preventDefault();
-    console.log("isEditMode", isEditMode.current);
-    console.log('todotoupdate', todoToUpdate.current);
     const updatedList = todoList.map((todoItem) => {
       if(todoToUpdate.current.id === todoItem.id){
-        console.log('this is todoUpdateItem', todoToUpdate.current)
         return {...todoToUpdate.current, title: title, description: description };
       }
       return todoItem;
